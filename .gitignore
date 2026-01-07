@@ -1,0 +1,22 @@
+# OS files
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# Go
+bin/
+vendor/
+*.test
+*.out
+pkg/pedalboard/pedalboard.a
+pedalboard-example
+
+# C++ Build
+cpp/build/
+*.a
+*.so
+*.dylib
+*.dll
