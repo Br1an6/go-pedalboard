@@ -32,7 +32,7 @@ Go Application <-> CGO <-> C++ Bridge <-> JUCE Framework
 package main
 
 import (
-	"github.com/brianliu/go-pedalboard/pkg/pedalboard"
+	"github.com/Br1an6/go-pedalboard/pkg/pedalboard"
 )
 
 func main() {
@@ -64,7 +64,7 @@ package main
 
 import (
 	"time"
-	"github.com/brianliu/go-pedalboard/pkg/pedalboard"
+	"github.com/Br1an6/go-pedalboard/pkg/pedalboard"
 )
 
 func main() {
