@@ -10,6 +10,9 @@ build-cpp:
 build-go: build-cpp
 	go build -v ./...
 
+test: build-cpp
+	go test -v ./...
+
 clean:
 	rm -rf $(BUILD_DIR)
 	rm -f pkg/pedalboard/pedalboard.a

@@ -38,6 +38,22 @@ PedalboardAudioBuffer* pedalboard_load_audio_file(const char* path);
 void pedalboard_save_audio_file(const char* path, PedalboardAudioBuffer* buffer);
 void pedalboard_audio_buffer_free(PedalboardAudioBuffer* buffer);
 
+// Audio Stream (Live IO)
+typedef void* PedalboardAudioStream;
+
+// Creates an audio stream that processes audio from the default input device
+// through the given processor and sends it to the default output device.
+PedalboardAudioStream pedalboard_create_audio_stream(PedalboardProcessor processor);
+
+// Starts the audio stream.
+void pedalboard_audio_stream_start(PedalboardAudioStream stream);
+
+// Stops the audio stream.
+void pedalboard_audio_stream_stop(PedalboardAudioStream stream);
+
+// Frees the audio stream.
+void pedalboard_audio_stream_free(PedalboardAudioStream stream);
+
 #ifdef __cplusplus
 }
 #endif

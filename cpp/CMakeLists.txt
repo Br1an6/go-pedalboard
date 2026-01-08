@@ -19,9 +19,12 @@ target_include_directories(pedalboard_static PUBLIC
 # Link JUCE modules
 target_link_libraries(pedalboard_static PUBLIC
     juce::juce_audio_basics
+    juce::juce_audio_devices
     juce::juce_audio_formats
     juce::juce_audio_processors
     juce::juce_core
+    juce::juce_events
+    juce::juce_dsp
 )
 
 target_compile_definitions(pedalboard_static PUBLIC
