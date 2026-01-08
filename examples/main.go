@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/brianliu/go-pedalboard/pkg/pedalboard"
+	"github.com/Br1an6/go-pedalboard/pkg/pedalboard"
 )
 
 func main() {
