@@ -120,6 +120,6 @@ make build-go
 
 ## License
 
-This project is licensed under the Apache License 2.0. JUCE is licensed under its own terms (GPL/Commercial).
+This project is licensed under the GPL License 3.0. JUCE is licensed under its own terms (GPL/Commercial).
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I81RWCLP)
