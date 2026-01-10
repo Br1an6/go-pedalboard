@@ -13,7 +13,7 @@ add_library(pedalboard_static STATIC
 )
 
 target_include_directories(pedalboard_static PUBLIC
-    include
+    ../pkg/pedalboard
 )
 
 # Link JUCE modules

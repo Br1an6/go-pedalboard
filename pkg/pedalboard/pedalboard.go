@@ -1,7 +1,6 @@
 package pedalboard
 
 /*
-#cgo CFLAGS: -I../../cpp/include
 #cgo LDFLAGS: -L../../cpp/build -lpedalboard_static
 #cgo darwin LDFLAGS: -framework Accelerate -framework AudioToolbox -framework AudioUnit -framework CoreAudio -framework CoreAudioKit -framework CoreMIDI -framework CoreFoundation -framework Foundation -framework AppKit -framework WebKit -framework CoreVideo -framework IOKit -framework QuartzCore -framework CoreImage -framework Security -lstdc++
 
@@ -225,4 +224,23 @@ func (s *AudioStream) Stop() {
 // Close releases the audio stream resources.
 func (s *AudioStream) Close() {
 	C.pedalboard_audio_stream_free(s.handle)
+}
+
+// GetInputDevices returns a list of available input device names.
+// Currently returns a dummy list.
+func GetInputDevices() ([]string, error) {
+	return []string{"Default Input"}, nil
+}
+
+// GetOutputDevices returns a list of available output device names.
+// Currently returns a dummy list.
+func GetOutputDevices() ([]string, error) {
+	return []string{"Default Output"}, nil
+}
+
+// NewAudioStreamWithDevices creates a new audio stream using the specified processor and devices.
+// Currently ignores device names and uses defaults.
+func NewAudioStreamWithDevices(processor *Processor, inputDevice, outputDevice string) (*AudioStream, error) {
+	// TODO: Implement device selection in C++ layer
+	return NewAudioStream(processor)
 }
